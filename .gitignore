@@ -1,0 +1,12 @@
+# Python Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Security - Private Keys & Credentials (DO NOT PUSH TO GITHUB)
+*.pem
+awsSupportDocs/
+
+# OS files
+.DS_Store
+Thumbs.db
