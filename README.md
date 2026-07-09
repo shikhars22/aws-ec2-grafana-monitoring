@@ -82,7 +82,12 @@ Once the ports are open, configure the monitoring stack:
      `http://3.109.133.18:9090`
    * Scroll to the bottom and click **Save & test**. (You should see a green success notification: *"Data source is working"*).
 
-3. **Create a Dashboard**:
+3. **Metrics Source**:
+   * Prometheus automatically scrapes and exposes its own performance metrics at the following endpoint:
+     🔗 `http://3.109.133.18:9090/metrics`
+   * Grafana polls this `/metrics` HTTP endpoint to gather data and build real-time dashboard visualizations.
+
+4. **Create a Dashboard**:
    * Go to **Dashboards** -> **New Dashboard** -> **Add visualization**.
    * Select the **Prometheus** data source you just added.
-   * Query metrics (e.g. standard Prometheus self-monitoring metrics like `prometheus_http_requests_total`) and click **Apply** to build and save your visual panels.
+   * Query metrics (e.g., CPU, memory, or request counters from the `/metrics` endpoint) and click **Apply** to build and save your visual panels.
